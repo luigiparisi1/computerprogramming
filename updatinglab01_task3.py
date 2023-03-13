@@ -1,3 +1,4 @@
+import streamlit as st
 import json, requests
 
 APIkey = 'b0dc5ff479faf43dff849169f51ad2b0'
