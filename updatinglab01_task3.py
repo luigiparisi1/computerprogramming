@@ -2,7 +2,7 @@ import streamlit as st
 import json, requests
 
 APIkey = 'b0dc5ff479faf43dff849169f51ad2b0'
-location = st.radio('Which city do you want to know the weather of?', ('Padova', 'Bressanone', 'Niscemi'))
+location = st.radio('Di quale città vuoi conoscere la temperatura e le condizioni?', ('Padova', 'Bressanone', 'Niscemi'))
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric' + '&lang=it'
 
