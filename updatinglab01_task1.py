@@ -2,7 +2,7 @@ import streamlit as st
 import json, requests
 
 APIkey = 'b0dc5ff479faf43dff849169f51ad2b0'
-location = st.input('gimme a city\t')
+location = st.text('gimme a city\t')
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
 
