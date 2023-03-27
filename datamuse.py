@@ -3,13 +3,13 @@ import json, requests
 st.header('Data from Datamuse')
 keyword = st.text_input('Please insert a keyword')
 criterium = st.selectbox('Please select the criterium you want to use for the search', ('Synonims', 'Antonyms', 'Sounds like', 'Means like'))
-if criterium = 'Synonims':
+if criterium == 'Synonims':
   key = 'rel_syn='
-elif criterium = 'Antonyms':
+elif criterium == 'Antonyms':
   key = 'rel_ant='
-elif criterium = 'Sounds like':
+elif criterium == 'Sounds like':
   key = 'sl='
-elif criterium = 'Means like':
+elif criterium == 'Means like':
   key = 'ml='
 else:
   pass
