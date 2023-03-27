@@ -5,7 +5,7 @@ keyword = st.text_input('Please insert a keyword')
 criterium = st.selectbox('Please select the criterium you want to use for the search', ('Synonims', 'Antonyms', 'Sounds like', 'Means like'))
 if criterium = 'Synonims':
   key = 'rel_syn='
-elif criterium = 'Antynoms':
+elif criterium = 'Antonyms':
   key = 'rel_ant='
 elif criterium = 'Sounds like':
   key = 'sl='
