@@ -1,6 +1,5 @@
 import streamlit as st
 from googletrans import Translator
-googletrans==4.0.0-rc1
 translator = Translator()
 word = st.text_input('Gimme a word\t')
 while word != 'quit':
