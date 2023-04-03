@@ -12,7 +12,7 @@ elif criterium == 'Sounds like':
 elif criterium == 'Means like':
   key = 'ml='
 else:
-  pass
+  key = None
 url= 'https://api.datamuse.com/words?' + key  + keyword + '&max=10'
 response = requests.get(url)
 dataFromDatamuse = json.loads(response.text)
