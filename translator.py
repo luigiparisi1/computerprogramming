@@ -1,9 +1,9 @@
 import streamlit as st
 from googletrans import Translator
-st.header('This is my beautiful translator')
+st.header('Aoh, qua si traducono cose')
 translator = Translator()
-word = st.text_input('Gimme a word')
-dest_lang = st.text_input('Gimme any language')
-# if (word and dest_lang): dovrei metterlo ma non capisco perché
-translation = translator.translate(word, dest = dest_lang )
-st.write(translation.text)
+word = st.text_input('Scrivi quello che te pare ')
+dest_lang = st.text_input('Dimme na lingua (oppure er codice)')
+if (word and dest_lang) :
+  translation = translator.translate(word, dest = dest_lang )
+  st.write(translation.text)
