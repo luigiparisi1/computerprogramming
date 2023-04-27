@@ -1,8 +1,8 @@
-import streamlit as st
-import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
+import streamlit as st
+import nltk
 from nltk.corpus import wordnet
 from nltk import pos_tag, word_tokenize
 
