@@ -8,7 +8,7 @@ dest_lang = st.selectbox('Please, choose one of these languages', ('de', 'en', '
 
 if input_text and dest_lang:
   output_text = translator.translate(input_text, dest=dest_lang)
-  st.write(output_text)
+  st.write(output_text.text)
 
 if dest_lang:
   stanza.download(dest_lang)
