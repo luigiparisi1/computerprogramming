@@ -35,8 +35,7 @@ def main():
     
     if text and dest_lang:
         translation = translator.translate(text, dest = dest_lang)
-        st.write(translation)
-        words = word_tokenize(translation)
+        words = word_tokenize(translation.text)
         for word in words:
             if st.button(word):
                 show_word_info(word)
