@@ -14,12 +14,11 @@ if dest_lang:
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}")
  text = lan_nlp(analysed_text)
- for i, sent in enumerate(analysed_text.sentences):
+ for i, sent in enumerate(text.sentences):
     st.write("[Sentence {}]".format(i+1))
     for word in sent.words:
         st.write("{:12s}\t{:12s}\t{:6s}\t{:d}\t{:12s}".format(\
               word.text, word.lemma, word.pos, word.head, word.deprel))
-    print("")
 else:
  st.write("No language detected")
 
