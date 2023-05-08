@@ -1,16 +1,19 @@
 import streamlit as st
 import stanza
 from googletrans import Translator
+
 translator = Translator()
 input_text = st.text_input('Please, insert text here')
-dest_lang = st.selectbox('Please, choose one of these languages', ('de', 'en', 'it', 'ru')
-if (input_text and dest_lang) :
-  output_text = translator.translate (input_text, dest = dest_lang)
+dest_lang = st.selectbox('Please, choose one of these languages', ('de', 'en', 'it', 'ru'))
+
+if input_text and dest_lang:
+  output_text = translator.translate(input_text, dest=dest_lang)
   st.write(output_text)
+
 if dest_lang:
   stanza.download(dest_lang)
-else:	
-	st.write("No language selected")
+else:
+  st.write("No language selected")
                          
     
 
