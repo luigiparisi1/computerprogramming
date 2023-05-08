@@ -4,7 +4,7 @@ from googletrans import Translator
 
 translator = Translator()
 input_text = st.text_input('Please, insert text here')
-dest_lang = st.selectbox('Please, choose one of these languages', ('de', 'en', 'it', 'ru'))
+dest_lang = st.text_input('Please, choose any language)
 
 if input_text and dest_lang:
   output_text = translator.translate(input_text, dest=dest_lang)
@@ -13,7 +13,10 @@ if input_text and dest_lang:
 if dest_lang:
   stanza.download(dest_lang)
 else:
-  st.write("No language selected")
+  st.write("No language detected")
+
+lan_nlp = stanza.Pipeline(str(dest_lang))
+
                          
     
 
