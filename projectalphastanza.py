@@ -9,7 +9,7 @@ dest_lang = st.text_input('Select a language')
 if (input_text and dest_lang):
  output_text = translator.translate(input_text, dest=dest_lang)
  st.write(output_text.text)
- analysed_text = output_text.text)
+ analysed_text = (output_text.text)
 if dest_lang:
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}")
