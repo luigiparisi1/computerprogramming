@@ -10,7 +10,7 @@ if (input_text and dest_lang):
 if dest_lang:
   stanza.download(dest_lang)
 else:	
-	st.write("No language selected"
+	st.write("No language selected")
                          
     
 
