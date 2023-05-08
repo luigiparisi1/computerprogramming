@@ -6,18 +6,16 @@ translator = Translator()
 input_text = st.text_input('Please, insert text here')
 dest_lang = st.text_input('Please, choose any language')
 
-if input_text and dest_lang:
-  output_text = translator.translate(input_text, dest=dest_lang)
-  st.write(output_text.text)
-
 if dest_lang:
   stanza.download(dest_lang)
 else:
   st.write("No language detected")
 
-lan_nlp = stanza.Pipeline("{dest_lang}")
+if input_text and dest_lang:
+  output_text = translator.translate(input_text, dest=dest_lang)
+  st.write(output_text.text)
 
-                         
+  lan_nlp = stanza.Pipeline(f"{dest_lang}")
     
 
 #    import streamlit as st
