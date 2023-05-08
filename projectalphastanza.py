@@ -15,7 +15,7 @@ if dest_lang:
 else:
   st.write("No language detected")
 
-lan_nlp = stanza.Pipeline(dest_lang)
+lan_nlp = stanza.Pipeline("{dest_lang}")
 
                          
     
