@@ -4,7 +4,7 @@ from googletrans import Translator
 
 translator = Translator()
 input_text = st.text_input('Please, insert text here')
-dest_lang = st.selectbox('Please, choose a language'('de', 'it', 'en')
+dest_lang = st.selectbox('Please, choose a language', ('de', 'it', 'en'))
 
 if (input_text and dest_lang):
  output_text = translator.translate(input_text, dest=dest_lang)
