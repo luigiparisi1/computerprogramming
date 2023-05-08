@@ -26,6 +26,7 @@ for i, sent in enumerate(text.sentences):
         if st.button(f"Show sentence {i+1}"):
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
+             if st.button(word)
                 st.write(f"{word.text}\t{word.lemma}\t{word.pos}")
         else:
             st.write(f"No results for sentence {i+1}.")
