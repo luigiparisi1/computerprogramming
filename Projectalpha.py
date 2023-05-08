@@ -43,6 +43,8 @@ def main():
 if __name__ == "__main__":
     main()
     
+#QUESTA COSA FUNZIONA, MALE MA FUNZIONA
+    
     
 #    import streamlit as st
 #from googletrans import Translator
