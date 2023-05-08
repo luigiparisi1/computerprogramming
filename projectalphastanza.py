@@ -7,7 +7,12 @@ dest_lang = st.selectbox('Please, choose one of these languages', ('de', 'en', '
 if (input_text and dest_lang):
   output_text = translator.translate (input_text, dest = dest_lang)
   st.write(output_text)
-lan_nlp = stanza.Pipeline(dest_lang)
+if dest_lang:
+  stanza.download(dest_lang)
+else:	
+	st.write("No language selected"
+                         
+    
 
 #    import streamlit as st
 #from googletrans import Translator
