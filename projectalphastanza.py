@@ -12,8 +12,8 @@ if (input_text and dest_lang):
  st.write(output_text.text)
  analysed_text = (output_text.text)
 else:
- pass
-if (analysed_text and dest_lang):
+ st.write ("Waiting...")
+if (input_text and dest_lang):
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
  text = lan_nlp(analysed_text)
