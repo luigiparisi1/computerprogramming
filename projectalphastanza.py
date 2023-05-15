@@ -13,7 +13,7 @@ if (input_text and dest_lang):
  analysed_text = (output_text.text)
 else:
  pass
-if (input_text and dest_lang):
+if (analysed_text and dest_lang):
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
  text = lan_nlp(analysed_text)
@@ -24,13 +24,13 @@ if (input_text and dest_lang):
   #            word.text, word.lemma, word.pos, word.head, word.deprel))
 #else:
 # st.write("No language detected")
- 
-for i, sent in enumerate(text.sentences):
+if text:
+ for i, sent in enumerate(text.sentences):
         if st.button(f"Show sentence {i+1}"):
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
              if st.button(word.text):
-                st.write(f"{word.lemma}\t{word.pos}")
+                st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
         else:
             st.write(f"No results for sentence {i+1}.")
 else:
