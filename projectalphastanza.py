@@ -21,15 +21,15 @@ if (input_text and dest_lang):
 if input_text:
  for i, sent in enumerate(text.sentences):
   sentence_text = sent.text
- if st.button(f"Show sentence {i+1}"):
+  if st.button(f"Show sentence {i+1}"):
             st.write(f"Sentence {i+1}: {sentence_text}")
             for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
              else:
               pass
- else:
-   pass
+  else:
+    pass
 else:
     st.write("No language selected.")
 
