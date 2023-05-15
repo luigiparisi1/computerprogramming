@@ -20,7 +20,7 @@ if (input_text and dest_lang):
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
     text = lan_nlp(analysed_text)
   except ValueError:
-  st.write ("Sorry, this language is not supported by Stanza.")
+   st.write ("Sorry, this language is not supported by Stanza.")
 
 if input_text:
   for i, sent in enumerate(text.sentences):
