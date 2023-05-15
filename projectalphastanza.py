@@ -34,7 +34,7 @@ if text:
              else:
               pass
         else:
-            st.write(f"No results for sentence {i+1}.")
+            pass
 else:
     st.write("No language selected.")
 
