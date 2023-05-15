@@ -34,8 +34,7 @@ if st.button(f"Sentence {i+1}: {sentence_text}"):
                pass
 else:
   pass
-else:
-    st.write("No language selected.")
+
   
 # COSE DA CAPIRE (CHIEDERE AL PROF): L'APP LANCIA UN ERRORE OGNI VOLTA CHE NELLA STESSA FRASE INCONTRA UNA PAROLA DUPLICATA
 # INVECE DI APRIRE IL BOX CON LE INFO RICHIESTE ALLA LINEA 28 L'APP CHIUDE L'INTERA FRASE
