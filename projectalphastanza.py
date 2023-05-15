@@ -28,8 +28,8 @@ if input_text:
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
              else:
               pass
-        else:
-            pass
+ else:
+   pass
 else:
     st.write("No language selected.")
 
