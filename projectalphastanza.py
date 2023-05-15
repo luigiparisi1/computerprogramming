@@ -25,15 +25,15 @@ if (input_text and dest_lang):
 if text:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
-if st.button(f"Sentence {i+1}: {sentence_text}"):
+    if st.button(f"Sentence {i+1}: {sentence_text}"):
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
              else:
                pass
-else:
-  pass
+    else:
+      pass
 
   
 # COSE DA CAPIRE (CHIEDERE AL PROF): L'APP LANCIA UN ERRORE OGNI VOLTA CHE NELLA STESSA FRASE INCONTRA UNA PAROLA DUPLICATA
