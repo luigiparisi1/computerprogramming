@@ -30,7 +30,7 @@ if st.button(f"Sentence {i+1}: {sentence_text}"):
            for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
-              else:
+             else:
                pass
 else:
   pass
