@@ -14,8 +14,7 @@ if (input_text and dest_lang):
       translated_text = (output_text.text)
     except ValueError:
       st.info (f"{dest_lang} is not a valid language!")
-      text = False
-      dest_lang = False
+      
 else:
   st.write ("Waiting...")
 
