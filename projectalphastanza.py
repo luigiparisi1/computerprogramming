@@ -17,13 +17,7 @@ if (input_text and dest_lang):
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
  text = lan_nlp(analysed_text)
-# for i, sent in enumerate(text.sentences):
- #   st.write("[Sentence {}]".format(i+1))
- #  for word in sent.words:
- #       st.write("{:12s}\t{:12s}\t{:6s}\t{:d}\t{:12s}".format(\
-  #            word.text, word.lemma, word.pos, word.head, word.deprel))
-#else:
-# st.write("No language detected")
+
 if input_text:
  for i, sent in enumerate(text.sentences):
         if st.button(f"Show sentence {i+1}"):
@@ -56,3 +50,10 @@ else:
 #if (word and dest_lang) :
 #  translation = translator.translate(word, dest = dest_lang )
 #  st.write(translation.text)
+# for i, sent in enumerate(text.sentences):
+ #   st.write("[Sentence {}]".format(i+1))
+ #  for word in sent.words:
+ #       st.write("{:12s}\t{:12s}\t{:6s}\t{:d}\t{:12s}".format(\
+  #            word.text, word.lemma, word.pos, word.head, word.deprel))
+#else:
+# st.write("No language detected")
