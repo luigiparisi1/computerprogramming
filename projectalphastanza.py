@@ -13,7 +13,7 @@ if (input_text and dest_lang):
  analysed_text = (output_text.text)
 else:
  pass
-if dest_lang:
+if (input_text and dest_lang):
  stanza.download(dest_lang)
  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
  text = lan_nlp(analysed_text)
