@@ -10,7 +10,7 @@ dest_lang = st.text_input('Select a language')
 if (input_text and dest_lang):
   output_text = translator.translate(input_text, dest=dest_lang)
   st.write(output_text.text)
-  analysed_text = (output_text.text)
+  translated_text = (output_text.text)
 else:
   st.write ("Waiting...")
 
@@ -18,11 +18,11 @@ if (input_text and dest_lang):
   try:
     stanza.download(dest_lang)
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
-    text = lan_nlp(analysed_text)
+    text = lan_nlp(translated_text)
   except stanza.pipeline.core.UnsupportedProcessorError:
    st.write ("Sorry, this language is not supported by Stanza.")
 
-if lan_nlp:
+if text:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
 if st.button(f"Sentence {i+1}: {sentence_text}"):
