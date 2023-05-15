@@ -24,7 +24,7 @@ if (input_text and dest_lang):
   #            word.text, word.lemma, word.pos, word.head, word.deprel))
 #else:
 # st.write("No language detected")
-if text:
+if input_text:
  for i, sent in enumerate(text.sentences):
         if st.button(f"Show sentence {i+1}"):
             st.write(f"Sentence {i+1}:")
