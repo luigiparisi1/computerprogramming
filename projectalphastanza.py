@@ -8,14 +8,17 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Select a language')
 
 if (input_text and dest_lang):
-  try:
-    output_text = translator.translate(input_text, dest=dest_lang)
-    st.write(output_text.text)
-    translated_text = (output_text.text)
-  except ValueError:
-    st.info (f"{dest_lang} is not a valid language!")
-    text = False
-    dest_lang = False
+  if dest_lang is not None:
+    try:
+      output_text = translator.translate(input_text, dest=dest_lang)
+      st.write(output_text.text)
+      translated_text = (output_text.text)
+    except ValueError:
+      st.info (f"{dest_lang} is not a valid language!")
+      text = False
+      dest_lang = False
+   else:
+    st.info("No language selected!")
 else:
   st.write ("Waiting...")
 
