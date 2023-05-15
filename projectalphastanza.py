@@ -19,7 +19,7 @@ if (input_text and dest_lang):
     stanza.download(dest_lang)
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
     text = lan_nlp(analysed_text)
-  except ValueError:
+  except stanza.pipeline.core.UnsupportedProcessorError:
    st.write ("Sorry, this language is not supported by Stanza.")
 
 if input_text:
