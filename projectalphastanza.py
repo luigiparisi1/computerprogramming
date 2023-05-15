@@ -8,7 +8,6 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Select a language')
 
 if (input_text and dest_lang):
-  if dest_lang is not None:
     try:
       output_text = translator.translate(input_text, dest=dest_lang)
       st.write(output_text.text)
