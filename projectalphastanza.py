@@ -22,7 +22,9 @@ if (input_text and dest_lang):
   except stanza.pipeline.core.UnsupportedProcessorError:
    st.info ("Sorry, this language is not supported by Stanza.")
    text = False
-
+  except ValueError:
+    st.info(f"{dest_lang} is not a valid language!")
+    
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
