@@ -21,8 +21,9 @@ if (input_text and dest_lang):
     text = lan_nlp(translated_text)
   except stanza.pipeline.core.UnsupportedProcessorError:
    st.write ("Sorry, this language is not supported by Stanza.")
+   text = False
 
-if text == True:
+if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
     if st.button(f"Sentence {i+1}: {sentence_text}"):
