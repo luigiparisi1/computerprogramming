@@ -22,7 +22,7 @@ if (input_text and dest_lang):
   except stanza.pipeline.core.UnsupportedProcessorError:
    st.write ("Sorry, this language is not supported by Stanza.")
 
-if text = True:
+if text == True:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
     if st.button(f"Sentence {i+1}: {sentence_text}"):
