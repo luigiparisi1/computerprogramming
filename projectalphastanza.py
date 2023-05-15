@@ -31,6 +31,8 @@ if text:
             for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
+             else:
+              pass
         else:
             st.write(f"No results for sentence {i+1}.")
 else:
