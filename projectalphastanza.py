@@ -13,12 +13,16 @@ if (input_text and dest_lang):
  analysed_text = (output_text.text)
 else:
  st.write ("Waiting...")
-if (input_text and dest_lang):
- stanza.download(dest_lang)
- lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
- text = lan_nlp(analysed_text)
 
-if input_text:
+if (input_text and dest_lang):
+ try:
+  stanza.download(dest_lang)
+  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
+  text = lan_nlp(analysed_text)
+ except ValueError:
+  st.write ("Sorry, this language is not supported by Stanza.")
+
+ if input_text:
  for i, sent in enumerate(text.sentences):
   sentence_text = sent.text
   if st.button(f"Sentence {i+1}: {sentence_text}"):
@@ -35,6 +39,7 @@ else:
   
 # COSE DA CAPIRE (CHIEDERE AL PROF): L'APP LANCIA UN ERRORE OGNI VOLTA CHE NELLA STESSA FRASE INCONTRA UNA PAROLA DUPLICATA
 # INVECE DI APRIRE IL BOX CON LE INFO RICHIESTE ALLA LINEA 28 L'APP CHIUDE L'INTERA FRASE
+# QUANDO GLI DAI IN PASTO UNA LINGUA CHE STANZA NON SUPPORTA, INVECE DI LANCIARE ERRORE DOVREBBE USCIRE UN MESSAGGIO CHE TI DICE CHE LA LINGUA NON è SUPPORTATA
 
 # MIGLIORAMENTI DA FARE: INTEGRA UN DIZIONARIO NELLA LINGUA DI DESTINAZIONE, DA MOSTRARE INSIEME AL LEMMA E AL POS
 # COME FACCIO A RENDERLA PIù VELOCE? PERò RISPETTO A QUALCHE VERSIONE PRECEDENTE NON CRASHA, ALMENO QUESTO è POSITIVO
