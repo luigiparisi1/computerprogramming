@@ -17,7 +17,7 @@ if (input_text and dest_lang):
       st.info (f"{dest_lang} is not a valid language!")
       text = False
       dest_lang = False
-   else:
+  else:
     st.info("No language selected!")
 else:
   st.write ("Waiting...")
