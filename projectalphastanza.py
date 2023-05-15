@@ -15,7 +15,7 @@ else:
  pass
 if dest_lang:
  stanza.download(dest_lang)
- lan_nlp = stanza.Pipeline(f"{dest_lang}")
+ lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
  text = lan_nlp(analysed_text)
 # for i, sent in enumerate(text.sentences):
  #   st.write("[Sentence {}]".format(i+1))
