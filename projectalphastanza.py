@@ -16,9 +16,9 @@ else:
 
 if (input_text and dest_lang):
   try:
-  stanza.download(dest_lang)
-  lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
-  text = lan_nlp(analysed_text)
+    stanza.download(dest_lang)
+    lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
+    text = lan_nlp(analysed_text)
 except ValueError:
   st.write ("Sorry, this language is not supported by Stanza.")
 
