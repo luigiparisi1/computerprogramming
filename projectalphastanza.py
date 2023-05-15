@@ -27,7 +27,7 @@ if input_text:
     sentence_text = sent.text
 if st.button(f"Sentence {i+1}: {sentence_text}"):
            st.write(f"Sentence {i+1}:")
-            for word in sent.words:
+           for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
               else:
