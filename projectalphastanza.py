@@ -8,32 +8,32 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Select a language')
 
 if (input_text and dest_lang):
- output_text = translator.translate(input_text, dest=dest_lang)
- st.write(output_text.text)
- analysed_text = (output_text.text)
+  output_text = translator.translate(input_text, dest=dest_lang)
+  st.write(output_text.text)
+  analysed_text = (output_text.text)
 else:
- st.write ("Waiting...")
+  st.write ("Waiting...")
 
 if (input_text and dest_lang):
- try:
+  try:
   stanza.download(dest_lang)
   lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
   text = lan_nlp(analysed_text)
- except ValueError:
+except ValueError:
   st.write ("Sorry, this language is not supported by Stanza.")
 
- if input_text:
- for i, sent in enumerate(text.sentences):
-  sentence_text = sent.text
-  if st.button(f"Sentence {i+1}: {sentence_text}"):
-            st.write(f"Sentence {i+1}:")
+if input_text:
+  for i, sent in enumerate(text.sentences):
+    sentence_text = sent.text
+if st.button(f"Sentence {i+1}: {sentence_text}"):
+           st.write(f"Sentence {i+1}:")
             for word in sent.words:
              if st.button(word.text):
                 st.info(f"{word.lemma}\t{word.pos}", icon = 'i')
-             else:
-              pass
-  else:
-    pass
+              else:
+               pass
+else:
+  pass
 else:
     st.write("No language selected.")
   
