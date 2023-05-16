@@ -37,7 +37,7 @@ if text != False:
            for word in sent.words:
             duplicate_avoider +=1
             if st.button(word.text, key = duplicate_avoider):
-                st.info(f"{word.lemma}\t{word.pos}")
+                st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
              
     else:
       pass
