@@ -41,16 +41,13 @@ if (input_text and dest_lang):
    text = False
   
 duplicate_avoider = 0
-col = st.columns()
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
     if st.button(f"Sentence {i+1}: {sentence_text}"):
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
-            duplicate_avoider +=1
-            col +=1
-            with col
+            duplicate_avoider += 1
             if st.button(word.text, key = duplicate_avoider):
                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
              
