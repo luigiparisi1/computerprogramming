@@ -40,7 +40,8 @@ if (input_text and dest_lang):
    st.info ("Sorry, this language is not supported by Stanza.")
    text = False
   
-duplicate_avoider = 0    
+duplicate_avoider = 0
+col = 0 = st.columns
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
@@ -48,6 +49,8 @@ if text != False:
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
             duplicate_avoider +=1
+            col +=1
+            with col
             if st.button(word.text, key = duplicate_avoider):
                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
              
