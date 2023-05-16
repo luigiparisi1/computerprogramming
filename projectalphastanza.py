@@ -17,7 +17,7 @@ if (input_text and dest_lang):
       text = False
       dest_lang = False
 else:
-  st.info ("No language selected...")
+  st.info ("Oops! Something is missing!")
 
 text = False
 if (input_text and dest_lang):
