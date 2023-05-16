@@ -19,6 +19,7 @@ if (input_text and dest_lang):
 else:
   st.write ("Waiting...")
 
+text = False
 if (input_text and dest_lang):
   try:
     stanza.download(dest_lang)
