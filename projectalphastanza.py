@@ -10,10 +10,10 @@ st.write('''This app allows you to translate and then analyse a text in any lang
 as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
 choice. It will be automatically recognized. Then, choose a language. You can write the
 name of the language in English or just type the two code-letter (e.g. for Spanish, you 
-can either type "Spanish" or "es". You will have a translation and then you can
+can either type "Spanish" or "es"). You will have a translation and then you can
 walk through the sentences of the translated text. When clicking on a sentence,
 you will have clickable single tokens. When clicking them, you will get the lemma and the part
-of speech of the desired word.''', )
+of speech of the desired word.''')
 
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
