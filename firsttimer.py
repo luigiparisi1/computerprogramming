@@ -2,7 +2,7 @@ import streamlit as st
 import stanza
 stanza.download("it")
 it_nlp =  stanza.Pipeline('it')
-text = st.write("inserisci frase qui")
+text = st.text_input("inserisci frase qui")
 if text:
     sentence = it_nlp(text)
     for i, sent in enumerate(sentence.sentences):
