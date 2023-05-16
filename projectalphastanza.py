@@ -36,7 +36,7 @@ if text != False:
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
             duplicate_avoider +=1
-             if st.button(word.text, key = duplicate_avoider):
+            if st.button(word.text, key = duplicate_avoider):
                 st.info(f"{word.lemma}\t{word.pos}")
              
     else:
