@@ -6,8 +6,8 @@ translator = Translator()
 
 st.title('Translator- Text Analyser')
 st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
-st.subheader('''This app allows you to translate and then analyse a text in any language 
-(as long as Stanza and Google Translate support it). To use it, just type a text in any language of your
+st.subheader('''This app allows you to translate and then analyse a text in any language, 
+as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
 choice. It will be automatically recognized. Then, choose a language. You can write the
 name of the language in English or just type the two code-letter (e.g. for Spanish, you 
 can either type "Spanish" or "es". You will have a translation and then you can
