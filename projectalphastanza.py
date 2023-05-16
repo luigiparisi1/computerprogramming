@@ -3,7 +3,7 @@ import stanza
 from googletrans import Translator
 
 translator = Translator()
-st.header('Welcome to the slowest text analyser ever!')
+st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Select a language')
 
