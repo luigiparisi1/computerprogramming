@@ -41,7 +41,7 @@ if (input_text and dest_lang):
    text = False
   
 duplicate_avoider = 0
-col = 0 = st.columns
+col = st.columns()
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
