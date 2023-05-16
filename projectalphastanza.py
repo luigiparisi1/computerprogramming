@@ -28,19 +28,16 @@ if (input_text and dest_lang):
    st.info ("Sorry, this language is not supported by Stanza.")
    text = False
   
-    
+duplicate_avoider = (id for id in range(1, 100_00))    
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
-    if sentence_text not in st.session_state:
-        st.session_state.key = False
     if st.button(f"Sentence {i+1}: {sentence_text}"):
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
-             if st.button(word.text):
+             if st.button(word.text, key = next (id)):
                 st.info(f"{word.lemma}\t{word.pos}")
-             else:
-               pass
+             
     else:
       pass
 
