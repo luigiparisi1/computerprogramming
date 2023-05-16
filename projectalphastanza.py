@@ -5,7 +5,7 @@ from googletrans import Translator
 translator = Translator()
 st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
 input_text = st.text_area('Please, insert text here')
-dest_lang = st.text_input('Select a language')
+dest_lang = st.text_input('Enter a language here')
 
 if (input_text and dest_lang):
     try:
