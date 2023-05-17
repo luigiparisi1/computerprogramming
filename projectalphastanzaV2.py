@@ -47,7 +47,7 @@ if (input_text and dest_lang):
     st.info ("Sorry, this language is not supported.")
     text = False
 
-duplicate avoider_sentences = 0 
+duplicate_avoider_sentences = 0 
 duplicate_avoider_words = 0
 if text != False:
   for i, sent in enumerate(text.sentences):
