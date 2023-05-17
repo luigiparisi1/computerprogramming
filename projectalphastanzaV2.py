@@ -60,11 +60,11 @@ if text:
              word = placeholder[x].text
              word_str = str(word)
              st.write(word_str)
-         #    if word_analysis.pos == 'PUNCT':
-          #    continue
-           #  duplicate_avoider += 1
-            # if st.button(word_analysis.text, key=f"word_{duplicate_avoider}"):
-             # st.info(f"Lemma: {word_analysis.lemma}; Part of Speech: {word_analysis.upos}")
+             if word_analysis.pos == 'PUNCT':
+             continue
+             duplicate_avoider += 1
+             if st.button(word_str, key=f"word_{duplicate_avoider}"):
+              st.info(f"Lemma: {word_str.lemma}; Part of Speech: {word_str.upos}")
 else:
   pass
 
