@@ -35,9 +35,10 @@ if (input_text and dest_lang):
     dest_lang = False
 else:
   st.info ("Oops! Something is missing!")
+  
 def stanza():
-text = None
-if (input_text and dest_lang):
+ text = None
+ if (input_text and dest_lang):
   try:
     stanza.download(dest_lang)
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
@@ -46,8 +47,8 @@ if (input_text and dest_lang):
     st.info ("Sorry, this language is not supported.")
     text = None
 
-duplicate_avoider = 0
-if text:
+ duplicate_avoider = 0
+ if text:
     for i, sent in enumerate(text.sentences):
         sentence_text = sent.text
         if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
@@ -67,7 +68,7 @@ if text:
                     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
 else:
     pass
-st.selectbox("Would you like to analize the translated text?", Yes, No)
+# st.selectbox("Would you like to analize the translated text?", Yes, No)
 
   #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 #  if text:
