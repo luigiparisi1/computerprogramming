@@ -53,14 +53,13 @@ if text:
         sentence_text = sent.text
         if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
             st.session_state['clicked'] = i
-
         if st.session_state['clicked'] == i:
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
                 if word.pos == 'PUNCT':
                     continue
-                duplicate_avoider += 1
-                st.info(f"Token: {word.text}\nLemma: {word.lemma}\nPOS: {word.pos}")
+                duplicate_avoider_words += 1
+                st.button(word.text, key=f"word_{duplicate_avoider}")
 else:
   pass
 
