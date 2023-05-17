@@ -47,8 +47,7 @@ if (input_text and dest_lang):
     st.info ("Sorry, this language is not supported.")
     text = False
 
-duplicate_avoider_sentences = 0 
-duplicate_avoider_words = 0
+duplicate_avoider = 0
 if text != False:
  for i, sent in enumerate(text.sentences):
         sentence_text = sent.text
@@ -60,7 +59,7 @@ if text != False:
                 if word.pos == 'PUNCT':
                     continue
                 duplicate_avoider_words += 1
-                if st.button(word.text, key=f"word_{duplicate_avoider_words}"):
+                if st.button(word.text, key=f"word_{duplicate_avoider}"):
                  st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 else:
   pass
