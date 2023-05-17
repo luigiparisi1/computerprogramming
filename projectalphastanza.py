@@ -47,7 +47,8 @@ if text != False:
     if st.button(f"Sentence {i+1}: {sentence_text}"):
            st.write(f"Sentence {i+1}:")
            for word in sent.words:
-            duplicate_avoider += 1
+            if word.pos != 'punct'.upper:
+                duplicate_avoider += 1
             if st.button(word.text, key = duplicate_avoider):
                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
              
