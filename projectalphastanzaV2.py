@@ -64,7 +64,7 @@ if text:
                 if st.button(word_text, key=f"word_{duplicate_avoider}"):
                     lemma = word.lemma
                     upos = word.upos
-                    feats = word.features
+                    feats = word.feats
                     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
 else:
     pass
