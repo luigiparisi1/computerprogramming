@@ -57,7 +57,7 @@ if text:
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
              placeholder = sent.words
-             st.write(placeholder.text)
+             st.write(placeholder["text"])
               #  if word.pos == 'PUNCT':
                  #   continue
                # duplicate_avoider += 1
