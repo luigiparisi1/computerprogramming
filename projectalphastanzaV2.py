@@ -58,7 +58,7 @@ if text != False:
             for word in sent.words:
                 if word.pos == 'PUNCT':
                     continue
-                duplicate_avoider_words += 1
+                duplicate_avoider += 1
                 if st.button(word.text, key=f"word_{duplicate_avoider}"):
                  st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 else:
