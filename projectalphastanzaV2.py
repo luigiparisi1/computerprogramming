@@ -52,7 +52,7 @@ duplicate_avoider_words = 0
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
-    duplicate_avoider_sentences
+    duplicate_avoider_sentences += 1
     st.write(clicked)
     if st.button(f"Sentence {i+1}: {sentence_text}", key= duplicate_avoider_sentences):
       clicked = i
@@ -62,8 +62,8 @@ if text != False:
       for word in sent.words:
         if word.pos == 'PUNCT':
           continue
-        duplicate_avoider += 1
-        st.button(word.text, key = duplicate_avoider)
+        duplicate_avoider_words += 1
+        st.button(word.text, key = duplicate_avoider_words)
     else:
       pass
 
