@@ -37,7 +37,7 @@ if (input_text and dest_lang):
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
     text = lan_nlp(translated_text)
   except stanza.pipeline.core.UnsupportedProcessorError:
-   st.info ("Sorry, this language is not supported by Stanza.")
+   st.info ("Sorry, this language is not supported.")
    text = False
   
 duplicate_avoider = 0
