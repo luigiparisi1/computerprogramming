@@ -39,8 +39,6 @@ else:
   st.info ("Oops! Something is missing!")
   
 st.subheader("Analyzer")
-with st.empty():
- st.info("Loading")
  if (input_text and dest_lang): 
    try:
      stanza.download(dest_lang)
