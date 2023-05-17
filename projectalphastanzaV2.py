@@ -36,46 +36,37 @@ if (input_text and dest_lang):
 else:
   st.info ("Oops! Something is missing!")
   
-def stanza():
  
- if (input_text and dest_lang):
-  try:
+if (input_text and dest_lang):
+ try:
     stanza.download(dest_lang)
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
     text = lan_nlp(translated_text)
-  except stanza.pipeline.core.UnsupportedProcessorError:
+ except stanza.pipeline.core.UnsupportedProcessorError:
     st.info ("Sorry, this language is not supported.")
     text = None
 
- duplicate_avoider = 0
- if text:
-    for i, sent in enumerate(text.sentences):
-        sentence_text = sent.text
-        if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
-            st.session_state['clicked'] = i
-        if st.session_state['clicked'] == i:
-            st.write(f"Sentence {i+1}:")
-            columns = st.beta_columns(len(sent.words))
-            for x, word in enumerate(sent.words):
-                if word.pos == 'PUNCT':
-                    continue
-                duplicate_avoider += 1
-                word_text = str(word.text)
-                if st.button(word_text, key=f"word_{duplicate_avoider}"):
-                    lemma = word.lemma
-                    upos = word.upos
-                    feats = word.feats
-                    st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
- else:
-    pass
-
-option = st.selectbox("Would you like to analize the translated text?", ("Yes", "No"))
-
-if option == "Yes":
- stanza()
+duplicate_avoider = 0
+if text:
+ for i, sent in enumerate(text.sentences):
+   sentence_text = sent.text
+   if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
+     st.session_state['clicked'] = i
+   if st.session_state['clicked'] == i:
+     st.write(f"Sentence {i+1}:")
+            
+   for x, word in enumerate(sent.words):
+    if word.pos == 'PUNCT':
+      continue
+    duplicate_avoider += 1
+    word_text = str(word.text)
+    if st.button(word_text, key=f"word_{duplicate_avoider}"):
+     lemma = word.lemma
+     upos = word.upos
+     feats = word.feats
+     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
 else:
- pass
-
+  pass
   #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 #  if text:
  #   for i, sent in enumerate(text.sentences):
