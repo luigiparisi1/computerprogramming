@@ -37,7 +37,7 @@ if (input_text and dest_lang):
 else:
   st.info ("Oops! Something is missing!")
 
-text = False
+text = None
 if (input_text and dest_lang):
   try:
     stanza.download(dest_lang)
@@ -45,10 +45,10 @@ if (input_text and dest_lang):
     text = lan_nlp(translated_text)
   except stanza.pipeline.core.UnsupportedProcessorError:
     st.info ("Sorry, this language is not supported.")
-    text = False
+    text = None
 
 duplicate_avoider = 0
-if text != False:
+if text:
  for i, sent in enumerate(text.sentences):
         sentence_text = sent.text
         if st.button(f"Sentence {i+1}: {sentence_text}", key= i):
