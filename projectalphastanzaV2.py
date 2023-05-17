@@ -64,7 +64,7 @@ if text:
      upos = word.upos
      feats = word.feats
      st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
-else:
+ else:
   pass
   #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 #  if text:
