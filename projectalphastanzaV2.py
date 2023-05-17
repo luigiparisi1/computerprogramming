@@ -9,7 +9,6 @@ if 'clicked' not in st.session_state:
   st.session_state['clicked'] = '0'
 else:
   clicked = st.session_state.clicked
-  st.write(clicked)
 
 st.title('Translator- Text Analyser')
 st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
