@@ -68,21 +68,3 @@ if text:
        pass
 else:
  pass
-  #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
-#  if text:
- #   for i, sent in enumerate(text.sentences):
-  #      sentence_text = sent.text
-   #     if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
-    #        st.session_state['clicked'] = i
-     #   if st.session_state['clicked'] == i:
-      #      st.write(f"Sentence {i+1}:")
-       #     for x, word in enumerate(sent.words):
-        #     placeholder = sent.words
-         #    word = placeholder[x].text
-          #   word_str = str(word)
-           #  st.write(word_str)
-          #   if word_analysis.pos == 'PUNCT':
-           #  continue
-            # duplicate_avoider += 1
-             #if st.button(word_str.text, key=f"word_{duplicate_avoider}"):
-              #st.info(f"Lemma: {word_str.lemma}; Part of Speech: {word_str.upos}")
