@@ -58,6 +58,7 @@ if text:
             for x, word in enumerate(sent.words):
              placeholder = sent.words
              word = placeholder[x].text
+             type(word)
          #    if word_analysis.pos == 'PUNCT':
           #    continue
            #  duplicate_avoider += 1
