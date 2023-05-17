@@ -57,7 +57,7 @@ if text:
             st.write(f"Sentence {i+1}:")
             for x, word in enumerate(sent.words):
              placeholder = sent.words
-             placeholder[x].text = word_analysis
+              word_analysis = placeholder[x].text
              if word_analysis.pos == 'PUNCT':
               continue
              duplicate_avoider += 1
