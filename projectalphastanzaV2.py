@@ -20,7 +20,7 @@ can either type "Spanish" or "es"). You will have a translation and then you can
 walk through the sentences of the translated text. When clicking on a sentence,
 you will have clickable single tokens. When clicking them, you will get the lemma and the part
 of speech of the desired word.''')
-
+text = None
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
 st.subheader("Translation")
