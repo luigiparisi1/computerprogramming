@@ -66,7 +66,7 @@ def stanza():
                     upos = word.upos
                     feats = word.feats
                     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
-  else:
+ else:
     pass
 # st.selectbox("Would you like to analize the translated text?", Yes, No)
 
