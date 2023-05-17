@@ -61,8 +61,8 @@ if text != False:
                     continue
                 duplicate_avoider_words += 1
                 st.button(word.text, key=f"word_{duplicate_avoider_words}")
-    else:
-      pass
+else:
+  pass
 
  
 
