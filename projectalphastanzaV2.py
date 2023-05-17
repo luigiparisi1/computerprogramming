@@ -31,8 +31,8 @@ if (input_text and dest_lang):
     translated_text = (output_text.text)
  except ValueError:
     st.info (f"{dest_lang} is not a valid language!")
-    text = False
-    dest_lang = False
+    text = None
+    dest_lang = None
 else:
   st.info ("Oops! Something is missing!")
   
