@@ -55,6 +55,7 @@ if text:
             st.session_state['clicked'] = i
         if st.session_state['clicked'] == i:
             st.write(f"Sentence {i+1}:")
+            columns = st.beta_columns(len(sent.words))
             for x, word in enumerate(sent.words):
                 if word.pos == 'PUNCT':
                     continue
