@@ -42,7 +42,7 @@ if (input_text and dest_lang):
    text = False
   
 duplicate_avoider = 0
-if text != False:
+if text:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
     if st.button(f"Sentence {i+1}: {sentence_text}"):
