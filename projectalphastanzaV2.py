@@ -50,9 +50,9 @@ duplicate_avoider = 0
 if text:
  for i, sent in enumerate(text.sentences):
    sentence_text = sent.text
-   if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
+ if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
      st.session_state['clicked'] = i
-   if st.session_state['clicked'] == i:
+ if st.session_state['clicked'] == i:
      st.write(f"Sentence {i+1}:")
  for x, word in enumerate(sent.words):
      if word.pos == 'PUNCT':
