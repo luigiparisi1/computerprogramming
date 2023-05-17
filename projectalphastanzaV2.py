@@ -57,12 +57,12 @@ if text:
             st.write(f"Sentence {i+1}:")
             for x, word in enumerate(sent.words):
              placeholder = sent.words
-             st.write(placeholder[x].text)
-              #  if word.pos == 'PUNCT':
-                 #   continue
-               # duplicate_avoider += 1
-               # if st.button(word.text, key=f"word_{duplicate_avoider}"):
-                # st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
+             placeholder[x].text = pre_analysis_word
+                if pre_analysis_word.pos == 'PUNCT':
+                    continue
+                duplicate_avoider += 1
+                if st.button(word.text, key=f"word_{duplicate_avoider}"):
+                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
 else:
   pass
 
