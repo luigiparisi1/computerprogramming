@@ -54,13 +54,12 @@ if text:
      st.session_state['clicked'] = i
    if st.session_state['clicked'] == i:
      st.write(f"Sentence {i+1}:")
-            
-   for x, word in enumerate(sent.words):
-    if word.pos == 'PUNCT':
+    for x, word in enumerate(sent.words):
+     if word.pos == 'PUNCT':
       continue
-    duplicate_avoider += 1
-    word_text = str(word.text)
-    if st.button(word_text, key=f"word_{duplicate_avoider}"):
+     duplicate_avoider += 1
+     word_text = str(word.text)
+     if st.button(word_text, key=f"word_{duplicate_avoider}"):
      lemma = word.lemma
      upos = word.upos
      feats = word.feats
