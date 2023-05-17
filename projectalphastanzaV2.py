@@ -61,7 +61,7 @@ if text:
              if word_analysis.pos == 'PUNCT':
               continue
              duplicate_avoider += 1
-             if st.button(.text, key=f"word_{duplicate_avoider}"):
+             if st.button(word_analysis.text, key=f"word_{duplicate_avoider}"):
               st.info(f"Lemma: {word_analysis.lemma}; Part of Speech: {word_analysis.upos}")
 else:
   pass
