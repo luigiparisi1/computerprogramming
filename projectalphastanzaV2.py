@@ -11,7 +11,7 @@ else:
   clicked = st.session_state.clicked
 
 st.title('Translator- Text Analyser')
-st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
+st.header('Welcome to the slowest, horrible looking but functioning text analyser ever!')
 st.write('''This app allows you to translate and then analyse a text in any language,
 as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
 choice. It will be automatically recognized. Then, choose a language. You can write the
