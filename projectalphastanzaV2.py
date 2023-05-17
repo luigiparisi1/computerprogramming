@@ -26,14 +26,15 @@ dest_lang = st.text_input('Enter a language here')
 st.subheader("Translation")
 if (input_text and dest_lang):
  with st.empty():
-  try:
-    output_text = translator.translate(input_text, dest=dest_lang)
-    st.write(output_text.text)
-    translated_text = (output_text.text)
-  except ValueError:
-    st.info (f"{dest_lang} is not a valid language!")
-    text = None
-    dest_lang = None
+  st.info("Loading...")
+   try:
+     output_text = translator.translate(input_text, dest=dest_lang)
+     st.write(output_text.text)
+     translated_text = (output_text.text)
+   except ValueError:
+     st.info (f"{dest_lang} is not a valid language!")
+     text = None
+     dest_lang = None
 else:
   st.info ("Oops! Something is missing!")
   
