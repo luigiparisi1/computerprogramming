@@ -47,10 +47,12 @@ if (input_text and dest_lang):
     st.info ("Sorry, this language is not supported.")
     text = False
 
-duplicate_avoider = 0
+duplicate avoider_sentences = 0 
+duplicate_avoider_words = 0
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
+    duplicate_avoider_sentences
     st.write(clicked)
     if st.button(f"Sentence {i+1}: {sentence_text}", key=i):
       clicked = i
