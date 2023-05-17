@@ -58,11 +58,12 @@ if text:
             for x, word in enumerate(sent.words):
              placeholder = sent.words
              word_analysis = placeholder[x].text
-             if word_analysis.pos == 'PUNCT':
-              continue
-             duplicate_avoider += 1
-             if st.button(word_analysis.text, key=f"word_{duplicate_avoider}"):
-              st.info(f"Lemma: {word_analysis.lemma}; Part of Speech: {word_analysis.upos}")
+             st.write(word_analysis)
+         #    if word_analysis.pos == 'PUNCT':
+          #    continue
+           #  duplicate_avoider += 1
+            # if st.button(word_analysis.text, key=f"word_{duplicate_avoider}"):
+             # st.info(f"Lemma: {word_analysis.lemma}; Part of Speech: {word_analysis.upos}")
 else:
   pass
 
