@@ -55,7 +55,8 @@ if text:
             st.session_state['clicked'] = i
         if st.session_state['clicked'] == i:
             st.write(f"Sentence {i+1}:")
-            for word in sent.tokenize:
+            for word in sent.words:
+             st.write(sent.words)
                 if word.pos == 'PUNCT':
                     continue
                 duplicate_avoider += 1
