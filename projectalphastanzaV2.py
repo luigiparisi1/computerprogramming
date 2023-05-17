@@ -58,7 +58,7 @@ if text:
             for word in sent.words:
                 if word.pos == 'PUNCT':
                     continue
-                duplicate_avoider_words += 1
+                duplicate_avoider += 1
                 st.button(word.text, key=f"word_{duplicate_avoider}")
 else:
   pass
