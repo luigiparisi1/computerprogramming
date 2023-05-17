@@ -56,8 +56,9 @@ if text:
         if st.session_state['clicked'] == i:
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
-             st.write(sent.words)
-                #if word.pos == 'PUNCT':
+             placeholder = sent.words
+             st.write(placeholder)
+                if word.pos == 'PUNCT':
                  #   continue
                # duplicate_avoider += 1
                # if st.button(word.text, key=f"word_{duplicate_avoider}"):
