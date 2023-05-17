@@ -54,7 +54,7 @@ if text != False:
     sentence_text = sent.text
     duplicate_avoider_sentences
     st.write(clicked)
-    if st.button(f"Sentence {i+1}: {sentence_text}", key=i):
+    if st.button(f"Sentence {i+1}: {sentence_text}", key= duplicate_avoider_sentences):
       clicked = i
       st.session_state['clicked'] = clicked
     if clicked:
