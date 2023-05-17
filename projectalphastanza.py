@@ -50,11 +50,12 @@ if text != False:
             if word.pos == 'PUNCT':
                     continue
             duplicate_avoider += 1
-            if st.button(word.text, key = duplicate_avoider):
-                st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
+            
+if st.button(word.text, key = duplicate_avoider):
+  st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
              
-    else:
-      pass
+else:
+  pass
 
 # PROBLEMI  
 # COSE DA CAPIRE (CHIEDERE AL PROF): L'APP LANCIA UN ERRORE OGNI VOLTA CHE NELLA STESSA FRASE INCONTRA UNA PAROLA DUPLICATA (+++RISOLTO+++)
