@@ -57,11 +57,11 @@ if text:
             st.write(f"Sentence {i+1}:")
             for word in sent.words:
              st.write(sent.words)
-                if word.pos == 'PUNCT':
-                    continue
-                duplicate_avoider += 1
-                if st.button(word.text, key=f"word_{duplicate_avoider}"):
-                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
+                #if word.pos == 'PUNCT':
+                 #   continue
+               # duplicate_avoider += 1
+               # if st.button(word.text, key=f"word_{duplicate_avoider}"):
+                # st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
 else:
   pass
 
