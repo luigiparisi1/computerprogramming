@@ -60,7 +60,7 @@ if text:
                     continue
                 duplicate_avoider += 1
                 if st.button(word.text, key=f"word_{duplicate_avoider}"):
-                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
+                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
 else:
   pass
 
