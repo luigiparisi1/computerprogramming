@@ -61,7 +61,9 @@ if text:
                 duplicate_avoider += 1
                 word_text = str(word.text)
                 if st.button(word_text, key=f"word_{duplicate_avoider}"):
-                 st.info(f"Lemma: {word.lemma}; Part of Speech: {word.upos}")
+                 lemma = word.lemma()
+                 upos = word.upos()
+                 st.info(f"Lemma: {lemma}; Part of Speech: {upos}")
 else:
   pass
 
