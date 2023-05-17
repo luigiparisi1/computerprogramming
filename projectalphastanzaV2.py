@@ -39,7 +39,7 @@ else:
   st.info ("Oops! Something is missing!")
   
 st.subheader("Analyzer")
- if (input_text and dest_lang): 
+if (input_text and dest_lang): 
    try:
      stanza.download(dest_lang)
      lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
