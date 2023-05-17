@@ -35,7 +35,7 @@ if (input_text and dest_lang):
     dest_lang = False
 else:
   st.info ("Oops! Something is missing!")
-
+def stanza():
 text = None
 if (input_text and dest_lang):
   try:
@@ -67,8 +67,7 @@ if text:
                     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
 else:
     pass
-
- 
+st.selectbox("Would you like to analize the translated text?", Yes, No)
 
   #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 #  if text:
