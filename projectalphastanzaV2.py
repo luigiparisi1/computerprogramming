@@ -11,7 +11,7 @@ else:
   clicked = st.session_state.clicked
 
 st.title('Translator- Text Analyser')
-st.header('Welcome to the slowest, horrible looking but functioning text analyser ever!')
+st.header('Welcome to the slowest, horrible looking, buggy but functioning text analyser ever!')
 st.write('''This app allows you to translate and then analyse a text in any language,
 as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
 choice. It will be automatically recognized. Then, choose a language. You can write the
@@ -23,7 +23,7 @@ of speech of the desired word.''')
 
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
-
+st.subheader("Translation")
 if (input_text and dest_lang):
  try:
     output_text = translator.translate(input_text, dest=dest_lang)
