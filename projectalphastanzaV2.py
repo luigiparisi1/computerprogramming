@@ -36,7 +36,7 @@ if (input_text and dest_lang):
 else:
   st.info ("Oops! Something is missing!")
   
- 
+st.subheader("Analyser")
 if (input_text and dest_lang):
  try:
     stanza.download(dest_lang)
