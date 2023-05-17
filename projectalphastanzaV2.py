@@ -58,7 +58,7 @@ if text:
             for word in sent.words:
              placeholder = sent.words
              st.write(placeholder)
-                if word.pos == 'PUNCT':
+              #  if word.pos == 'PUNCT':
                  #   continue
                # duplicate_avoider += 1
                # if st.button(word.text, key=f"word_{duplicate_avoider}"):
