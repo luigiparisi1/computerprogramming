@@ -68,7 +68,11 @@ def stanza():
                     st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
  else:
     pass
-# st.selectbox("Would you like to analize the translated text?", Yes, No)
+option = st.selectbox("Would you like to analize the translated text?", "Yes", "No")
+if option == "Yes":
+ stanza()
+else:
+ pass
 
   #st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
 #  if text:
