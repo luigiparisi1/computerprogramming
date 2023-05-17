@@ -50,20 +50,17 @@ if (input_text and dest_lang):
 duplicate_avoider_sentences = 0 
 duplicate_avoider_words = 0
 if text != False:
-  for i, sent in enumerate(text.sentences):
-    sentence_text = sent.text
-    duplicate_avoider_sentences += 1
-    st.write(clicked)
-    if st.button(f"Sentence {i+1}: {sentence_text}", key= duplicate_avoider_sentences):
-      clicked = i
-      st.session_state['clicked'] = clicked
-    if clicked:
-      st.write(f"Sentence {i+1}:")
-      for word in sent.words:
-        if word.pos == 'PUNCT':
-          continue
-        duplicate_avoider_words += 1
-        st.button(word.text, key = duplicate_avoider_words)
+ for i, sent in enumerate(text.sentences):
+        sentence_text = sent.text
+        if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
+            st.session_state['clicked'] = i
+        if st.session_state['clicked'] == i:
+            st.write(f"Sentence {i+1}:")
+            for word in sent.words:
+                if word.pos == 'PUNCT':
+                    continue
+                duplicate_avoider_words += 1
+                st.button(word.text, key=f"word_{duplicate_avoider_words}")
     else:
       pass
 
