@@ -20,7 +20,7 @@ can either type "Spanish" or "es"). You will have a translation and then you can
 walk through the sentences of the translated text. When selecting a sentence,
 you will have clickable single tokens. When clicking them, you will get the lemma and the part
 of speech of the desired word.''')
-text = None
+text = False
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
 st.subheader("Translation")
@@ -33,7 +33,7 @@ if (input_text and dest_lang):
      translated_text = (output_text.text)
   except ValueError:
      st.info (f"{dest_lang} is not a valid language!")
-     text = None
+     text = False
      dest_lang = None
 else:
   st.info ("Oops! Something is missing!")
