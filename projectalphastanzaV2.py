@@ -27,7 +27,6 @@ st.subheader("Translation")
 if (input_text and dest_lang):
  with st.empty():
   st.info("Loading...")
-  if input_text is not None:
    try:
      output_dict = translator.translate(input_text, dest=dest_lang)
      st.write(output_text.text)
