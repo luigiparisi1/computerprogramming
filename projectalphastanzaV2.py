@@ -27,14 +27,14 @@ st.subheader("Translation")
 if (input_text and dest_lang):
  with st.empty():
   st.info("Loading...")
-   try:
+  try:
      output_dict = translator.translate(input_text, dest=dest_lang)
      st.write(output_text.text)
      translated_text = (output_text.text)
-   except ValueError:
+  except ValueError:
      st.info (f"{dest_lang} is not a valid language!")
      text = False
-     dest_lang = None
+     dest_lang = False
 else:
   st.info ("Oops! Something is missing!")
   
