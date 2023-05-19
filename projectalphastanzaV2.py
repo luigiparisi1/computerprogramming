@@ -28,7 +28,8 @@ if (input_text and dest_lang):
  with st.empty():
   st.info("Loading...")
   try:
-     output_text = translator.translate(input_text, dest=dest_lang)
+    output_text = translator.translate(input_text, dest=dest_lang)
+    if output_text.text is not None:
      st.write(output_text.text)
      translated_text = (output_text.text)
   except ValueError:
