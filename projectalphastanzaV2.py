@@ -86,6 +86,7 @@ if text:
        lemma = word.lemma
        upos = word.upos
        feats = word.feats
+       upos_label = upos_dict.get[upos, 'Unknown']
        st.info(f"Lemma: {lemma}; Part of Speech: {upos.value}, Features: {feats}")
       else:
        pass
