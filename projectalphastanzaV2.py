@@ -47,7 +47,7 @@ if (input_text and dest_lang):
    except stanza.pipeline.core.UnsupportedProcessorError:
      st.info ("Sorry, text in this language can not be analyzed.")
      text = None
-     except stanza.resources.common.UnknownLanguageError:
+   except stanza.resources.common.UnknownLanguageError:
       st.warning("This code is unknown! Try typing the language name in full charachters.")
 
 duplicate_avoider = 0
