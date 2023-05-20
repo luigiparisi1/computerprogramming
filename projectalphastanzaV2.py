@@ -92,3 +92,6 @@ if text:
        pass
 else:
  pass
+
+list_feats = list(word.feats.keys())
+st.write(list_feats)
