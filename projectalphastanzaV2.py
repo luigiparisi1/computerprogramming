@@ -50,6 +50,25 @@ if (input_text and dest_lang):
    except stanza.resources.common.UnknownLanguageError:
       st.warning("This code is unknown! Try typing the language name in full charachters.")
 
+upos_dict = {
+    'ADJ': 'Adjective',
+    'ADP': 'Adposition',
+    'ADV': 'Adverb',
+    'AUX': 'Auxiliary verb',
+    'CCONJ': 'Coordinating conjunction',
+    'DET': 'Determiner',
+    'INTJ': 'Interjection',
+    'NOUN': 'Noun',
+    'NUM': 'Numeral',
+    'PART': 'Particle',
+    'PRON': 'Pronoun',
+    'PROPN': 'Proper noun',
+    'PUNCT': 'Punctuation',
+    'SCONJ': 'Subordinating conjunction',
+    'SYM': 'Symbol',
+    'VERB': 'Verb',
+    'X': 'Other'
+}
 duplicate_avoider = 0
 if text:
  for i, sent in enumerate(text.sentences):
@@ -67,7 +86,7 @@ if text:
        lemma = word.lemma
        upos = word.upos
        feats = word.feats
-       st.info(f"Lemma: {lemma}; Part of Speech: {upos}, Features: {feats}")
+       st.info(f"Lemma: {lemma}; Part of Speech: {upos.value}, Features: {feats}")
       else:
        pass
 else:
