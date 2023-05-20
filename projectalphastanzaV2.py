@@ -1,10 +1,8 @@
 import streamlit as st
 import stanza
 from googletrans import Translator
-
- 
-
 translator = Translator()
+
 if 'clicked' not in st.session_state:
   st.session_state['clicked'] = '0'
 else:
