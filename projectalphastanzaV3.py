@@ -3,7 +3,25 @@ import stanza
 from googletrans import Translator
 
 translator = Translator()
-
+upos_dict = {
+    'ADJ': 'Adjective',
+    'ADP': 'Adposition',
+    'ADV': 'Adverb',
+    'AUX': 'Auxiliary verb',
+    'CCONJ': 'Coordinating conjunction',
+    'DET': 'Determiner',
+    'INTJ': 'Interjection',
+    'NOUN': 'Noun',
+    'NUM': 'Numeral',
+    'PART': 'Particle',
+    'PRON': 'Pronoun',
+    'PROPN': 'Proper noun',
+    'PUNCT': 'Punctuation',
+    'SCONJ': 'Subordinating conjunction',
+    'SYM': 'Symbol',
+    'VERB': 'Verb',
+    'X': 'Other'
+}
 @st.cache
 def translate_text(input_text, dest_lang):
     try:
