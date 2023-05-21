@@ -37,7 +37,7 @@ else:
   
 st.subheader("Analyzer")
 if (input_text and dest_lang):
-  with st.spinner("Analysing text...")
+  with st.spinner("Analysing text..."):
    try:
      stanza.download(dest_lang)
      lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
