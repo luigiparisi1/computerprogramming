@@ -23,8 +23,7 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
 st.subheader("Translation")
 if (input_text and dest_lang):
- with st.spinner():
-  st.info("Loading...")
+ with st.spinner("Loading..."):
   try:
      output_dict = translator.translate(input_text, dest=dest_lang)
      translated_text = (output_dict.text)
