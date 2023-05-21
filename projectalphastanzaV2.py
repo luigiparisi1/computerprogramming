@@ -23,7 +23,7 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
 st.subheader("Translation")
 if (input_text and dest_lang):
- with st.spinner("Loading..."):
+ with st.spinner("Translating text..."):
   try:
      output_dict = translator.translate(input_text, dest=dest_lang)
      translated_text = (output_dict.text)
@@ -36,7 +36,8 @@ else:
   st.info ("Oops! Something is missing!")
   
 st.subheader("Analyzer")
-if (input_text and dest_lang): 
+if (input_text and dest_lang):
+  with st.spinner("Analysing text...")
    try:
      stanza.download(dest_lang)
      lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
