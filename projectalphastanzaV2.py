@@ -29,7 +29,7 @@ if (input_text and dest_lang):
      translated_text = (output_dict.text)
      st.write(translated_text)
   except ValueError:
-     st.info (f"{dest_lang} is not a valid language!")
+     st.warning(f"{dest_lang} is not a valid language!")
      text = False
      dest_lang = False
 else:
