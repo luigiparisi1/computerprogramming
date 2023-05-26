@@ -20,7 +20,7 @@ of speech of the desired word.''')
 text = False
 
 @st.cache
-def text_translator():
+def text_translator(text_input, dest_lang):
   input_text = st.text_area('Please, insert text here')
   dest_lang = st.text_input('Enter a language here')
   st.subheader("Translation")
@@ -40,18 +40,21 @@ def text_translator():
 
 st.subheader("Analyzer")
 @st.cache
-def text_analyser():
+def text_analyser(translated_text, dest_lang):
  if (input_text and dest_lang):
   with st.spinner("Analysing text..."):
    try:
      stanza.download(dest_lang)
      lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt, lemma, pos, depparse" )
      text = lan_nlp(translated_text)
+     return text
    except stanza.pipeline.core.UnsupportedProcessorError:
      st.info ("Sorry, text in this language can not be analyzed.")
      text = None
+     return None
    except stanza.resources.common.UnknownLanguageError:
       st.warning("This code is unknown! Try typing the language name in full charachters.")
+      return None
 
 upos_dict = {
     'ADJ': 'Adjective',
@@ -73,6 +76,7 @@ upos_dict = {
     'X': 'Other'
 }
 duplicate_avoider = 0
+def main():
 if text:
  for i, sent in enumerate(text.sentences):
   sentence_text = sent.text
