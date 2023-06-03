@@ -30,11 +30,11 @@ if (input_text and dest_lang):
      st.write(translated_text)
   except ValueError:
      st.warning(f"{dest_lang} is not a valid language!")
-     text = False
-     dest_lang = False
+     text = None
+     dest_lang = None
 else:
     st.info ("Oops! Something is missing!")
-@st.cache  
+
 st.subheader("Analyzer")
 if (input_text and dest_lang):
   with st.spinner("Analysing text..."):
