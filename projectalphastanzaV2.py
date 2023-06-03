@@ -32,8 +32,8 @@ if (input_text and dest_lang):
      st.warning(f"{dest_lang} is not a valid language!")
      text = False
      dest_lang = False
-else:
-  st.info ("Oops! Something is missing!")
+  else:
+    st.info ("Oops! Something is missing!")
   
 st.subheader("Analyzer")
 if (input_text and dest_lang):
