@@ -8,7 +8,7 @@ if 'clicked' not in st.session_state:
 else:
   clicked = st.session_state.clicked
 
-st.title('Translator- Text Analyser')
+st.title('Super Translaton 3000 (-1)')
 st.header('Welcome to the slowest, horrible looking, buggy but functioning text analyser ever!')
 st.write('''This app allows you to translate and then analyse a text in any language,
 as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
