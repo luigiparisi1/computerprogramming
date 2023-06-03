@@ -34,7 +34,7 @@ if (input_text and dest_lang):
      dest_lang = False
 else:
     st.info ("Oops! Something is missing!")
-  
+@st.cache  
 st.subheader("Analyzer")
 if (input_text and dest_lang):
   with st.spinner("Analysing text..."):
