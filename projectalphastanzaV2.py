@@ -18,7 +18,7 @@ can either type "Spanish" or "es"). You will have a translation and then you can
 walk through the sentences of the translated text. When selecting a sentence,
 you will have clickable single tokens. When clicking them, you will get the lemma, the part
 of speech and the grammatical features (as in the text) of the desired word. \n
-Friendly reminder: *Good things come to those who wait*''')
+Friendly reminder: *Good things come to those who wait.*''')
 text = None
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
