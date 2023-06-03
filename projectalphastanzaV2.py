@@ -9,7 +9,7 @@ else:
   clicked = st.session_state.clicked
 
 st.title('Super Translaton 3000 (-1)')
-st.header('Welcome to the slowest, horrible looking, buggy but functioning text analyser ever!')
+st.header('Welcome to the slowest, somewhat buggy but functioning text analyser ever!')
 st.write('''This app allows you to translate and then analyse a text in any language,
 as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
 choice. It will be automatically recognized. Then, choose a language. You can write the
@@ -17,7 +17,8 @@ name of the language in English or just type the two code-letter (e.g. for Spani
 can either type "Spanish" or "es"). You will have a translation and then you can
 walk through the sentences of the translated text. When selecting a sentence,
 you will have clickable single tokens. When clicking them, you will get the lemma, the part
-of speech and the grammatical features (as in the text) of the desired word.''')
+of speech and the grammatical features (as in the text) of the desired word.
+Friendly reminder: *Good things come to those who wait*''')
 text = None
 input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
