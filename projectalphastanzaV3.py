@@ -29,7 +29,7 @@ def translate_text(input_text, dest_lang):
         translated_text = output_dict.text
         return translated_text
     except ValueError:
-        st.info(f"{dest_lang} is not a valid language!")
+        st.warning(f"{dest_lang} is not a valid language!")
         return None
 
 @st.cache(suppress_st_warning=True)
