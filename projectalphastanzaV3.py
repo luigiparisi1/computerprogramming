@@ -88,7 +88,7 @@ def main():
                             continue
                             duplicate_avoider += 1
                         word_text = str(word.text)
-                        if st.button(word_text, key=f"word_{x+1}"):
+                        if st.button(word_text, key=f"word_{x+duplicate_avoider}"):
                             lemma = word.lemma
                             upos = word.upos
                             feats = word.feats
