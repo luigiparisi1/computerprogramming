@@ -22,7 +22,7 @@ upos_dict = {
     'VERB': 'Verb',
     'X': 'Other'
 }
-@st.cache
+@st.cache(suppress_st_warning=True)
 def translate_text(input_text, dest_lang):
     try:
         output_dict = translator.translate(input_text, dest=dest_lang)
@@ -32,7 +32,7 @@ def translate_text(input_text, dest_lang):
         st.info(f"{dest_lang} is not a valid language!")
         return None
 
-@st.cache
+@st.cache(suppress_st_warning=True)
 def analyze_text(translated_text, dest_lang):
     try:
         stanza.download(dest_lang)
