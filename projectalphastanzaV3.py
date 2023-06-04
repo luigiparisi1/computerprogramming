@@ -2,7 +2,6 @@ import streamlit as st
 import stanza
 from googletrans import Translator
 
-duplicate_avoider = 0
 translator = Translator()
 upos_dict = {
     'ADJ': 'Adjective',
@@ -48,6 +47,7 @@ def analyze_text(translated_text, dest_lang):
         return None
 
 def main():
+    duplicate_avoider = 0
     if 'clicked' not in st.session_state:
         st.session_state['clicked'] = 0
 
