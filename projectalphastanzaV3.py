@@ -73,7 +73,6 @@ def main():
             st.write(translated_text)
 
     st.subheader("Analyzer")
-    duplicate_avoider = 0
     if input_text and dest_lang:
         with st.spinner("Analyzing..."):
             analyzed_text = analyze_text(translated_text, dest_lang)
