@@ -36,7 +36,7 @@ def translate_text(input_text, dest_lang):
 def analyze_text(translated_text, dest_lang):
     try:
         stanza.download(dest_lang)
-        lan_nlp = stanza.Pipeline(dest_lang, processors="tokenize, mwt, lemma, pos, depparse")
+        lan_nlp = stanza.Pipeline(dest_lang, processors="tokenize, mwt, lemma, pos")
         text = lan_nlp(translated_text)
         return text
     except stanza.pipeline.core.UnsupportedProcessorError:
@@ -47,7 +47,6 @@ def analyze_text(translated_text, dest_lang):
         return None
 
 def main():
-    duplicate_avoider = 0
     if 'clicked' not in st.session_state:
         st.session_state['clicked'] = 0
 
