@@ -2,6 +2,7 @@ import streamlit as st
 import stanza
 from googletrans import Translator
 
+duplicate_avoider = 0
 translator = Translator()
 upos_dict = {
     'ADJ': 'Adjective',
