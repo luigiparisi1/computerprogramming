@@ -91,7 +91,7 @@ def main():
                             upos = word.upos
                             feats = word.feats
                             upos_label = upos_dict.get(upos, 'Unknown')
-                            st.info(f"Lemma: {lemma}; Part of Speech: {upos_label}, Features: {feats}")
+                            st.info(f"**Lemma**: {lemma}; **Part of Speech**: {upos_label}, **Features**: {feats}")
                         else:
                             pass
 
