@@ -48,6 +48,7 @@ if (input_text and dest_lang):
      text = None
    except stanza.resources.common.UnknownLanguageError:
       st.warning("This code is unknown! Try typing the language name in full charachters.")
+      text = None
 
 upos_dict = {
     'ADJ': 'Adjective',
