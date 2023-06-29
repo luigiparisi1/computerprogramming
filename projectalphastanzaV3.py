@@ -51,7 +51,7 @@ def main():
         st.session_state['clicked'] = 0
 
     st.title('Super Translaton 3000')
-    st.header('Welcome to the improved version of Super Translaton 3000! This app is based on the previous one, except some improvements on caching.')
+    st.header('Welcome to the improved version of Super Translaton 3000!')
     st.write('''This app allows you to translate and then analyze a text in any language,
     as long as Stanza and Google Translate support it. To use it, just type a text in any language of your
     choice. It will be automatically recognized. Then, choose a language. You can write the
