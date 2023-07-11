@@ -75,7 +75,6 @@ def main():
     if input_text and dest_lang:
         with st.spinner("Analyzing..."):
             analyzed_text = analyze_text(translated_text, dest_lang)
-            st.write(analyzed_text)
         if analyzed_text:
             for i, sent in enumerate(analyzed_text.sentences):
                 sentence_text = sent.text
