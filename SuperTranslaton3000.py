@@ -49,7 +49,6 @@ def analyze_text(translated_text, dest_lang):
 def main():
     if 'clicked' not in st.session_state:
         st.session_state['clicked'] = 0
-    pipeline_started = False
 
     st.title('Super Translaton 3000')
     st.markdown('''This app allows you to translate and then analyze a text in any language,
@@ -65,41 +64,37 @@ def main():
 
     input_text = st.text_area('Please, insert text here')
     dest_lang = st.text_input('Enter a language here')
-    I
-    if st.button("Start Pipeline"):
-        pipeline_started = True
-        
-    if pipeline_started:
-        st.subheader("Translation")
-        if input_text and dest_lang:
-            with st.spinner("Translating..."):
-                translated_text = translate_text(input_text, dest_lang)
-            if translated_text:
-                st.write(translated_text)
 
-        st.subheader("Analyzer")
-        if input_text and dest_lang:
-            with st.spinner("Analyzing..."):
-                analyzed_text = analyze_text(translated_text, dest_lang)
-            if analyzed_text:
-                for i, sent in enumerate(analyzed_text.sentences):
-                    sentence_text = sent.text
-                    if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
-                        st.session_state['clicked'] = i + 1
-                    if st.session_state['clicked'] == i + 1:
-                        st.subheader(f"Sentence {i+1}:")
-                        for x, word in enumerate(sent.words):
-                            if word.pos == 'PUNCT':
-                                continue
-                            word_text = str(word.text)
-                            if st.button(word_text, key=f"word_{i}_{x}"):
-                                lemma = word.lemma
-                                upos = word.upos
-                                feats = word.feats
-                                upos_label = upos_dict.get(upos, 'Unknown')
-                                st.info(f"**Lemma**: {lemma}; **Part of Speech**: {upos_label}, **Features**: {feats}")
-                            else:
-                                pass
+    st.subheader("Translation")
+    if input_text and dest_lang:
+        with st.spinner("Translating..."):
+            translated_text = translate_text(input_text, dest_lang)
+        if translated_text:
+            st.write(translated_text)
+
+    st.subheader("Analyzer")
+    if input_text and dest_lang:
+        with st.spinner("Analyzing..."):
+            analyzed_text = analyze_text(translated_text, dest_lang)
+        if analyzed_text:
+            for i, sent in enumerate(analyzed_text.sentences):
+                sentence_text = sent.text
+                if st.button(f"Sentence {i+1}: {sentence_text}", key=f"sentence_{i+1}"):
+                    st.session_state['clicked'] = i + 1
+                if st.session_state['clicked'] == i + 1:
+                    st.subheader(f"Sentence {i+1}:")
+                    for x, word in enumerate(sent.words):
+                        if word.pos == 'PUNCT':
+                            continue
+                        word_text = str(word.text)
+                        if st.button(word_text, key=f"word_{i}_{x}"):
+                            lemma = word.lemma
+                            upos = word.upos
+                            feats = word.feats
+                            upos_label = upos_dict.get(upos, 'Unknown')
+                            st.info(f"**Lemma**: {lemma}; **Part of Speech**: {upos_label}, **Features**: {feats}")
+                        else:
+                            pass
 
 if __name__ == "__main__":
     main()
