@@ -96,3 +96,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+St.write("This app was written and developed by Luigi Parisi, MA Student @ unibz. [Buy me a coffee!](paypal.me/LParisi1)")
