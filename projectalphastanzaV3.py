@@ -97,5 +97,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-st.write("\n*8 This app was written and developed by Luigi Parisi, MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)")
