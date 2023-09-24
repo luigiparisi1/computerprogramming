@@ -65,7 +65,10 @@ def main():
 
     input_text = st.text_area('Please, insert text here')
     dest_lang = st.text_input('Enter a language here')
-    
+    I
+    if st.button("Start Pipeline"):
+        pipeline_started = True
+        
     if pipeline_started:
         st.subheader("Translation")
         if input_text and dest_lang:
