@@ -56,7 +56,7 @@ def main():
     choice. It will be automatically recognized. Then, choose a language. You can write the
     name of the language in English or just type the two-letter code (e.g., for Spanish, you
     can either type "Spanish" or "es"). You will have a translation and then you can
-    walk through the sentences of the translated text. When selecting a sentence,
+    run through the sentences of the translated text. When selecting a sentence,
     you will have clickable single tokens. When clicking them, you will get the lemma and the part
     of speech of the desired word.''')
     st.write("\n")
