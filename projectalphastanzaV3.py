@@ -97,4 +97,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-st.write("This app was written and developed by Luigi Parisi, MA Student @ unibz. [Buy me a coffee!](paypal.me/LParisi1)")
+st.write("This app was written and developed by Luigi Parisi, MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)")
