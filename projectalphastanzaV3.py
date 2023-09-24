@@ -58,8 +58,10 @@ def main():
     can either type "Spanish" or "es"). You will have a translation and then you can
     walk through the sentences of the translated text. When selecting a sentence,
     you will have clickable single tokens. When clicking them, you will get the lemma and the part
-    of speech of the desired word.
-    This app was written and developed by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)''')
+    of speech of the desired word.'''
+
+    st.markdown("***")
+    st.write("This app was written and developed by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)"
 
     input_text = st.text_area('Please, insert text here')
     dest_lang = st.text_input('Enter a language here')
