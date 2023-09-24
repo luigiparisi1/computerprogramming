@@ -61,7 +61,7 @@ def main():
     of speech of the desired word.'''
 
     st.markdown("***")
-    st.write("This app was written and developed by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)"
+    st.write("This app was written and developed by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student @ unibz. [Buy me a coffee!](https://www.paypal.me/LParisi1)")
 
     input_text = st.text_area('Please, insert text here')
     dest_lang = st.text_input('Enter a language here')
