@@ -60,7 +60,7 @@ def main():
     you will have clickable single tokens. When clicking them, you will get the lemma and the part
     of speech of the desired word.''')
     st.markdown("\n")
-    st.markdown("***This app was made by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student @ unibz. [Buy me a coffee!](https://www.paypal.com/donate/?hosted_button_id=NK63P5B6RHMSC)***")
+    st.markdown("***This app was made by [Luigi Parisi](https://www.linkedin.com/in/luigi-parisi-5b4b3527a/), MA Student in Applied Linguistics @ unibz. [Buy me a coffee!](https://www.paypal.com/donate/?hosted_button_id=NK63P5B6RHMSC)***")
 
     input_text = st.text_area('Please, insert text here')
     dest_lang = st.text_input('Enter a language here')
